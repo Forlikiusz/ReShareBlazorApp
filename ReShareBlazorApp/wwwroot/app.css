@@ -1,0 +1,124 @@
+.main-navbar {
+    width: 100%;
+    padding: 12px 24px;
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+
+.main-navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-navbar-brand {
+    color: #f8fafc;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    .main-navbar-brand:hover {
+        color: #60a5fa;
+    }
+
+.main-navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-navbar-link {
+    display: block;
+    padding: 9px 16px;
+    color: #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+    .main-navbar-link:hover {
+        color: white;
+        background: #334155;
+    }
+
+    .main-navbar-link.active {
+        color: white;
+        background: #2563eb;
+    }
+
+.navbar-search {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 42px;
+    margin-left: auto;
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+    .navbar-search:focus-within {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+.navbar-search-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0 14px;
+    color: #f8fafc;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+    .navbar-search-input::placeholder {
+        color: #94a3b8;
+    }
+
+.navbar-search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 100%;
+    flex-shrink: 0;
+    color: white;
+    background: #2563eb;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .navbar-search-button:hover {
+        background: #1d4ed8;
+    }
+
+    .navbar-search-button svg {
+        fill: currentColor;
+    }
+
+@media (max-width: 576px) {
+    .main-navbar {
+        padding: 12px;
+    }
+
+    .main-navbar-container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navbar-search {
+        width: 100%;
+    }
+}
