@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="ReShareBlazorApp.Api/ReShareBlazorApp.Api.csproj" Id="a799adab-7c32-4e7b-8937-599c95e71bcc" />
   <Project Path="ReShareBlazorApp/ReShareBlazorApp.csproj" />
 </Solution>
