@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ReShareBlazorApp.Api.DTOs;
 using ReShareBlazorApp.Api.Interfaces.Services;
 
 namespace ReShareBlazorApp.Api.Controllers
@@ -11,6 +12,19 @@ namespace ReShareBlazorApp.Api.Controllers
         public AuthController(IAuthService authService)
         {
             _authService = authService;
+        }
+        [HttpPost("register")] 
+        public async Task<IActionResult> Register(RegisterRequest request)
+        {
+            var result = await _authService.RegisterAsync(request);
+            if(result == null)
+            {
+                return BadRequest(new
+                {
+                    Message = "Nie udało się utworzyć konta"
+                });
+            }
+            return Ok(result);
         }
     }
 }
