@@ -1,4 +1,4 @@
-﻿namespace ReShareBlazorApp.Interfaces.Services
+﻿namespace ReShareBlazorApp.Api.Interfaces.Services
 {
     public interface IAuthService
     {

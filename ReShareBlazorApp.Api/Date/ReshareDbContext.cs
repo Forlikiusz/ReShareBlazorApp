@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace ReShareBlazorApp.Date
+namespace ReShareBlazorApp.Api.Date
 {
     public class ReshareDbContext : IdentityDbContext<User,IdentityRole<int>,int>
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace ReShareBlazorApp.Date
+namespace ReShareBlazorApp.Api.Date
 {
     public class User : IdentityUser<int>
     {

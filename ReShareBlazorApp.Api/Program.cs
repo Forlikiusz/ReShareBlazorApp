@@ -2,11 +2,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using ReShareBlazorApp.Date;
-using ReShareBlazorApp.Interfaces.Repositories;
-using ReShareBlazorApp.Interfaces.Services;
-using ReShareBlazorApp.Repositories;
-using ReShareBlazorApp.Services;
+using ReShareBlazorApp.Api.Date;
+using ReShareBlazorApp.Api.Interfaces.Services;
+using ReShareBlazorApp.Api.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
