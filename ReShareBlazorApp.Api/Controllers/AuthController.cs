@@ -13,11 +13,11 @@ namespace ReShareBlazorApp.Api.Controllers
         {
             _authService = authService;
         }
-        [HttpPost("register")] 
+        [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
             var result = await _authService.RegisterAsync(request);
-            if(result == null)
+            if (result == null)
             {
                 return BadRequest(new
                 {
@@ -26,5 +26,19 @@ namespace ReShareBlazorApp.Api.Controllers
             }
             return Ok(result);
         }
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginRequest request)
+        {
+            var result = await _authService.LoginAsync(request);
+            if (result == null)
+            {
+                return Unauthorized(new
+                {
+                    Message = "Nieprawidłowy email lub hasło."
+                });
+            }
+            return Ok(result);
+        }
+
     }
 }

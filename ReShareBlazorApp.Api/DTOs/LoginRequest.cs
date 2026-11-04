@@ -8,6 +8,6 @@ namespace ReShareBlazorApp.Api.DTOs
         [EmailAddress]
         public string Email { get; set; } = null!;
         [Required]
-        public string Passowrd { get; set; } = null!;
+        public string Password { get; set; } = null!;
     }
 }
