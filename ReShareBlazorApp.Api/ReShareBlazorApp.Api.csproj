@@ -27,4 +27,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ReShareBlazorApp.Shared\ReShareBlazorApp.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,5 +7,9 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ReShareBlazorApp.Shared\ReShareBlazorApp.Shared.csproj" />
+  </ItemGroup>
+
 
 </Project>
