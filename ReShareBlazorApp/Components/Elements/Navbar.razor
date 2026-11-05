@@ -1,10 +1,12 @@
-﻿<nav class="main-navbar">
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Components.Authorization
+<nav class="main-navbar">
     <div class="main-navbar-container">
-        <a class="main-navbar-brand" href="#">Navbar</a>
+        <a class="main-navbar-brand" href="/">Navbar</a>
 
         <ul class="main-navbar-links">
             <li class="main-navbar-item">
-                <a class="main-navbar-link active" href="#">Home</a>
+                <a class="main-navbar-link active" href="/">Home</a>
             </li>
             <li class="main-navbar-item">
                 <a class="main-navbar-link active" href="#">Odkrywaj</a>
@@ -31,6 +33,11 @@
                     <use href="#search" />
                 </svg>
             </button>
+            <AuthorizeView>
+                <Authorized Context="auth">
+                    <p>@auth.User.FindFirst(ClaimTypes.Email)?.Value</p>
+                </Authorized>
+            </AuthorizeView>
         </form>
     </div>
 </nav>
