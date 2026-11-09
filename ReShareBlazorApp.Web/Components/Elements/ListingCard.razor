@@ -1,0 +1,54 @@
+<article class="home-card">
+    <div class="home-card-image @TypeClass">
+        @if (!string.IsNullOrEmpty(ImageUrl))
+        {
+            <img src="@ImageUrl" alt="@Title" loading="lazy" />
+        }
+        <span class="home-card-type">@Type</span>
+        <button class="home-card-fav" type="button" aria-label="Dodaj do ulubionych">♡</button>
+    </div>
+
+    <div class="home-card-body">
+        <p class="home-card-category">@Category</p>
+        <h3 class="home-card-title">@Title</h3>
+        <p class="home-card-price">@Price</p>
+
+        <ul class="home-card-meta">
+            <li>@Location</li>
+            <li>Termin: @Term</li>
+            <li>Dodano: @Published</li>
+        </ul>
+
+        @if (Verified)
+        {
+            <p class="home-card-verified">✔ Zweryfikowany użytkownik</p>
+        }
+
+        <a class="home-btn home-btn-outline" href="@Link">Zobacz szczegóły</a>
+    </div>
+</article>
+
+@code {
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public string Category { get; set; } = "";
+    [Parameter] public string Type { get; set; } = "";
+    [Parameter] public string Price { get; set; } = "Bezpłatnie";
+    [Parameter] public string Location { get; set; } = "";
+    [Parameter] public string Term { get; set; } = "";
+    [Parameter] public string Published { get; set; } = "";
+    [Parameter] public bool Verified { get; set; }
+    [Parameter] public string Link { get; set; } = "#";
+    [Parameter] public string? ImageUrl { get; set; }
+
+    // Każdy typ ogłoszenia dostaje swój kolor (klasy są w site.css)
+    private string TypeClass => Type switch
+    {
+        "Sprzedam" => "type-sell",
+        "Oddam" => "type-give",
+        "Wypożyczę" => "type-rent",
+        "Mam wolne miejsce" => "type-seat",
+        "Mam wolny termin" => "type-slot",
+        "Szukam" => "type-seek",
+        _ => "type-other"
+    };
+}

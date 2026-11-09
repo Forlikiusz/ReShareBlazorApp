@@ -1,0 +1,97 @@
+<section class="home-hero">
+    <div class="home-container">
+        <h1 class="home-hero-title">Oddaj dalej to, czego już nie potrzebujesz</h1>
+        <p class="home-hero-lead">Bilety, miejsca w aucie, noclegi, sprzęt i wolne terminy. Znajdź je albo wystaw własne ogłoszenie.</p>
+
+        <form class="home-search" method="get" action="/oferty" role="search">
+            <div class="home-search-row">
+                <label class="home-field home-field-wide">
+                    <span>Czego szukasz?</span>
+                    <input type="search" name="q" placeholder="np. bilety na koncert" />
+                </label>
+
+                <label class="home-field">
+                    <span>Kategoria</span>
+                    <select name="kategoria">
+                        <option value="">Wszystkie</option>
+                        <option>Bilety i rezerwacje</option>
+                        <option>Wyjazdy i podróże</option>
+                        <option>Transport i miejsca</option>
+                        <option>Sprzęt i wypożyczenia</option>
+                        <option>Usługi i wolne terminy</option>
+                        <option>Wspólne aktywności</option>
+                        <option>Dom i przestrzeń</option>
+                        <option>Edukacja i rozwój</option>
+                        <option>Rodzina i dzieci</option>
+                        <option>Biznes i współpraca</option>
+                    </select>
+                </label>
+
+                <label class="home-field">
+                    <span>Typ ogłoszenia</span>
+                    <select name="typ">
+                        <option value="">Wszystkie</option>
+                        <option>Sprzedam</option>
+                        <option>Oddam</option>
+                        <option>Wypożyczę</option>
+                        <option>Mam wolne miejsce</option>
+                        <option>Szukam</option>
+                        <option>Oferuję wolny termin</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="home-search-row">
+                <label class="home-field home-field-wide">
+                    <span>Lokalizacja</span>
+                    <input type="text" name="lokalizacja" placeholder="Miejscowość, kod pocztowy lub region" />
+                </label>
+
+                <label class="home-field">
+                    <span>Promień</span>
+                    <select name="promien">
+                        <option value="5">5 km</option>
+                        <option value="10">10 km</option>
+                        <option value="25">25 km</option>
+                        <option value="50">50 km</option>
+                        <option value="100">100 km</option>
+                    </select>
+                </label>
+
+                <label class="home-field">
+                    <span>Od</span>
+                    <input type="date" name="od" />
+                </label>
+
+                <label class="home-field">
+                    <span>Do</span>
+                    <input type="date" name="do" />
+                </label>
+            </div>
+
+            <div class="home-search-row">
+                <label class="home-field">
+                    <span>Cena od (zł)</span>
+                    <input type="number" name="cenaMin" min="0" placeholder="0" />
+                </label>
+
+                <label class="home-field">
+                    <span>Cena do (zł)</span>
+                    <input type="number" name="cenaMax" min="0" placeholder="1000" />
+                </label>
+
+                <button class="home-btn home-btn-primary home-search-submit" type="submit">SZUKAJ</button>
+            </div>
+        </form>
+
+        <div class="home-popular">
+            <span class="home-popular-label">Popularne:</span>
+            <a class="home-chip" href="/oferty?q=bilety na koncert">Bilety na koncert</a>
+            <a class="home-chip" href="/oferty?q=wolne miejsca w samochodzie">Wolne miejsca w samochodzie</a>
+            <a class="home-chip" href="/oferty?q=noclegi">Noclegi</a>
+            <a class="home-chip" href="/oferty?q=sprzęt do wypożyczenia">Sprzęt do wypożyczenia</a>
+            <a class="home-chip" href="/oferty?q=skipassy">Skipassy</a>
+            <a class="home-chip" href="/oferty?typ=Oddam">Darmowe rzeczy</a>
+        </div>
+    </div>
+</section>
